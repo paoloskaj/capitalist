@@ -1,0 +1,49 @@
+// font size 1px-100px
+@for $i from 1 through 100 {
+    .s#{$i} {
+        font-size: $i + px;
+    }
+}
+
+// font weight 100-700
+@for $i from 1 through 7 {
+    .w#{$i * 100} {
+        font-weight: $i * 100;
+    }
+}
+
+
+
+
+// .text {
+//     // font colors
+//     &._c_white {
+//         color: white;
+//     }
+
+//     &._c_black {
+//         color: black;
+//     }
+
+//     // margin
+//     &._m0 {
+//         margin: 0;
+//     }
+
+//     &._m_t_0 {
+//         margin-top: 0;
+//     }
+
+//     &._m_t_5 {
+//         margin-top: 5px;
+//     }
+
+//     &._m_b_0 {
+//         margin-bottom: 0;
+//     }
+
+//     &._m_b_5 {
+//         margin-bottom: 5px;
+//     }
+
+// }

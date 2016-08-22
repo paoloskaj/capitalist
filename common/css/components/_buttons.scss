@@ -1,0 +1,46 @@
+a.simple-btn,
+button.simple-btn {
+    border: none;
+
+        display: inline-block;
+    padding: 3px 20px;
+    border-radius: 3px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 14px;
+    // font-weight: 400;
+    font-weight: 600;
+    
+    &:hover {
+        text-decoration: none;
+    }
+    //
+    &.mode-orange-1 {
+        background-color: #ea8c02;
+        &:hover {
+            color:white;
+        }
+    }
+    &.mode-black-1 {
+        
+        background-color: #313131;
+        &:hover {
+            color:white;
+        }
+    }
+     &.mode-gray-1 {
+        
+        background-color: #bfbfbf;
+        &:hover {
+            color:white;
+        }
+    }
+
+    &:focus {
+        outline: 0;
+    }
+
+    &:hover {}
+}

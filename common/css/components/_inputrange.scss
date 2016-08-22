@@ -1,0 +1,19 @@
+.rc-slider {
+    background-color: #dcdcdc !important;
+    height: 13px !important;
+
+    .rc-slider-handle {
+           margin-left: -7px;
+        width: 24px;
+        height: 24px;
+       border: solid 5px #313131;
+
+        // background-color: transparent;
+        background-color: #dcdcdc;
+    }
+
+    .rc-slider-track {
+        height: 13px !important;
+        background-color: #ea8c02;
+    }
+}

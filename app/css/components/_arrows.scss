@@ -1,0 +1,647 @@
+@media (max-width: $screen_xs_max) {
+    .to-right-xs {
+        &.to_white {
+            &:after {
+                border-color: transparent transparent transparent #FFFFFF;
+            }
+        }
+
+        &.to_black {
+            &:after {
+                border-color: transparent transparent transparent #2b2b2b;
+            }
+        }
+
+        &.to_green {
+            &:after {
+                border-color: transparent transparent transparent #97c00e;
+            }
+        }
+
+        &.to_blue {
+            &:after {
+                border-color: transparent transparent transparent #2d76b5;
+            }
+        }
+    }
+
+    .to-left-xs {
+        &.to_white {
+            &:after {
+                border-color: transparent #FFFFFF transparent transparent;
+            }
+        }
+
+        &.to_black {
+            &:after {
+                border-color: transparent #2b2b2b transparent transparent;
+            }
+        }
+
+        &.to_green {
+            &:after {
+                border-color: transparent #97c00e transparent transparent;
+            }
+        }
+
+        &.to_blue {
+            &:after {
+                border-color: transparent #2d76b5 transparent transparent;
+            }
+        }
+    }
+
+    .to-top-xs {
+        &.to_white {
+            &:after {
+                border-color: transparent transparent #FFFFFF transparent;
+            }
+        }
+
+        &.to_black {
+            &:after {
+                border-color: transparent transparent #2b2b2b transparent;
+            }
+        }
+
+        &.to_green {
+            &:after {
+                border-color: transparent transparent #97c00e transparent;
+            }
+        }
+
+        &.to_blue {
+            &:after {
+                border-color: transparent transparent #2d76b5 transparent;
+            }
+        }
+    }
+
+    .to-bottom-xs {
+        &.to_white {
+            &:after {
+                border-color: #FFFFFF transparent transparent  transparent;
+            }
+        }
+
+        &.to_black {
+            &:after {
+                border-color: #2b2b2b transparent transparent  transparent;
+            }
+        }
+
+        &.to_green {
+            &:after {
+                border-color: #97c00e transparent transparent  transparent;
+            }
+        }
+
+        &.to_blue {
+            &:after {
+                border-color: #2d76b5 transparent transparent transparent;
+            }
+        }
+    }
+
+    .to-right-xs,
+    .to-left-xs,
+    .to-top-xs,
+    .to-bottom-xs {
+        position: relative;
+
+        &:after {
+            content: "";
+            position: absolute;
+            z-index: 100;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+    }
+
+    .to-right-xs {
+        &:after {
+            top: 50%;
+            transform: translateY(-50%);
+            right: -14px;
+            border-width: 15px 0 15px 15px;
+            border-color: transparent transparent transparent #FFFFFF;
+        }
+    }
+
+    .to-left-xs {
+        &:after {
+            top: 50%;
+            transform: translateY(-50%);
+            left: -14px;
+            border-width: 15px 15px 15px 0;
+            border-color: transparent #FFFFFF transparent transparent;
+        }
+    }
+
+    .to-top-xs {
+        &:after {
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 0px 15px 15px 15px;
+            border-color: transparent transparent #ffffff transparent;
+        }
+    }
+
+    .to-bottom-xs {
+        &:after {
+            bottom: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 15px 15px 0px  15px;
+            border-color: #ffffff transparent transparent  transparent;
+        }
+    }
+}
+
+@media (min-width: $screen_sm_min) and (max-width: $screen_sm_max) {
+    .to-right-sm {
+        &.to_white {
+            &:after {
+                border-color: transparent transparent transparent #FFFFFF;
+            }
+        }
+
+        &.to_black {
+            &:after {
+                border-color: transparent transparent transparent #2b2b2b;
+            }
+        }
+
+        &.to_green {
+            &:after {
+                border-color: transparent transparent transparent #97c00e;
+            }
+        }
+
+        &.to_blue {
+            &:after {
+                border-color: transparent transparent transparent #2d76b5;
+            }
+        }
+    }
+
+    .to-left-sm {
+        &.to_white {
+            &:after {
+                border-color: transparent #FFFFFF transparent transparent;
+            }
+        }
+
+        &.to_black {
+            &:after {
+                border-color: transparent #2b2b2b transparent transparent;
+            }
+        }
+
+        &.to_green {
+            &:after {
+                border-color: transparent #97c00e transparent transparent;
+            }
+        }
+
+        &.to_blue {
+            &:after {
+                border-color: transparent #2d76b5 transparent transparent;
+            }
+        }
+    }
+
+    .to-top-sm {
+        &.to_white {
+            &:after {
+                border-color: transparent transparent #FFFFFF transparent;
+            }
+        }
+
+        &.to_black {
+            &:after {
+                border-color: transparent transparent #2b2b2b transparent;
+            }
+        }
+
+        &.to_green {
+            &:after {
+                border-color: transparent transparent #97c00e transparent;
+            }
+        }
+
+        &.to_blue {
+            &:after {
+                border-color: transparent transparent #2d76b5 transparent;
+            }
+        }
+    }
+
+    .to-bottom-sm {
+        &.to_white {
+            &:after {
+                border-color: #FFFFFF transparent transparent  transparent;
+            }
+        }
+
+        &.to_black {
+            &:after {
+                border-color: #2b2b2b transparent transparent  transparent;
+            }
+        }
+
+        &.to_green {
+            &:after {
+                border-color: #97c00e transparent transparent  transparent;
+            }
+        }
+
+        &.to_blue {
+            &:after {
+                border-color: #2d76b5 transparent transparent transparent;
+            }
+        }
+    }
+
+    .to-right-sm,
+    .to-left-sm,
+    .to-top-sm,
+    .to-bottom-sm {
+        position: relative;
+
+        &:after {
+            content: "";
+            position: absolute;
+            z-index: 100;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+    }
+
+    .to-right-sm {
+        &:after {
+            top: 50%;
+            transform: translateY(-50%);
+            right: -14px;
+            border-width: 15px 0 15px 15px;
+            border-color: transparent transparent transparent #FFFFFF;
+        }
+    }
+
+    .to-left-sm {
+        &:after {
+            top: 50%;
+            transform: translateY(-50%);
+            left: -14px;
+            border-width: 15px 15px 15px 0;
+            border-color: transparent #FFFFFF transparent transparent;
+        }
+    }
+
+    .to-top-sm {
+        &:after {
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 0px 15px 15px 15px;
+            border-color: transparent transparent #ffffff transparent;
+        }
+    }
+
+    .to-bottom-sm {
+        &:after {
+            bottom: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 15px 15px 0px  15px;
+            border-color: #ffffff transparent transparent  transparent;
+        }
+    }
+}
+
+@media (min-width: $screen_md_min) and (max-width: $screen_md_max) {
+    .to-right-md {
+        &.to_white {
+            &:after {
+                border-color: transparent transparent transparent #FFFFFF;
+            }
+        }
+
+        &.to_black {
+            &:after {
+                border-color: transparent transparent transparent #2b2b2b;
+            }
+        }
+
+        &.to_green {
+            &:after {
+                border-color: transparent transparent transparent #97c00e;
+            }
+        }
+
+        &.to_blue {
+            &:after {
+                border-color: transparent transparent transparent #2d76b5;
+            }
+        }
+    }
+
+    .to-left-md {
+        &.to_white {
+            &:after {
+                border-color: transparent #FFFFFF transparent transparent;
+            }
+        }
+
+        &.to_black {
+            &:after {
+                border-color: transparent #2b2b2b transparent transparent;
+            }
+        }
+
+        &.to_green {
+            &:after {
+                border-color: transparent #97c00e transparent transparent;
+            }
+        }
+
+        &.to_blue {
+            &:after {
+                border-color: transparent #2d76b5 transparent transparent;
+            }
+        }
+    }
+
+    .to-top-md {
+        &.to_white {
+            &:after {
+                border-color: transparent transparent #FFFFFF transparent;
+            }
+        }
+
+        &.to_black {
+            &:after {
+                border-color: transparent transparent #2b2b2b transparent;
+            }
+        }
+
+        &.to_green {
+            &:after {
+                border-color: transparent transparent #97c00e transparent;
+            }
+        }
+
+        &.to_blue {
+            &:after {
+                border-color: transparent transparent #2d76b5 transparent;
+            }
+        }
+    }
+
+    .to-bottom-md {
+        &.to_white {
+            &:after {
+                border-color: #FFFFFF transparent transparent  transparent;
+            }
+        }
+
+        &.to_black {
+            &:after {
+                border-color: #2b2b2b transparent transparent  transparent;
+            }
+        }
+
+        &.to_green {
+            &:after {
+                border-color: #97c00e transparent transparent  transparent;
+            }
+        }
+
+        &.to_blue {
+            &:after {
+                border-color: #2d76b5 transparent transparent transparent;
+            }
+        }
+    }
+
+    .to-right-md,
+    .to-left-md,
+    .to-top-md,
+    .to-bottom-md {
+        position: relative;
+
+        &:after {
+            content: "";
+            position: absolute;
+            z-index: 100;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+    }
+
+    .to-right-md {
+        &:after {
+            top: 50%;
+            transform: translateY(-50%);
+            right: -14px;
+            border-width: 15px 0 15px 15px;
+            border-color: transparent transparent transparent #FFFFFF;
+        }
+    }
+
+    .to-left-md {
+        &:after {
+            top: 50%;
+            transform: translateY(-50%);
+            left: -14px;
+            border-width: 15px 15px 15px 0;
+            border-color: transparent #FFFFFF transparent transparent;
+        }
+    }
+
+    .to-top-md {
+        &:after {
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 0px 15px 15px 15px;
+            border-color: transparent transparent #ffffff transparent;
+        }
+    }
+
+    .to-bottom-md {
+        &:after {
+            bottom: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 15px 15px 0px  15px;
+            border-color: #ffffff transparent transparent  transparent;
+        }
+    }
+}
+
+@media (min-width: $screen_lg_min) {
+    .to-right-lg {
+        &.to_white {
+            &:after {
+                border-color: transparent transparent transparent #FFFFFF;
+            }
+        }
+
+        &.to_black {
+            &:after {
+                border-color: transparent transparent transparent #2b2b2b;
+            }
+        }
+
+        &.to_green {
+            &:after {
+                border-color: transparent transparent transparent #97c00e;
+            }
+        }
+
+        &.to_blue {
+            &:after {
+                border-color: transparent transparent transparent #2d76b5;
+            }
+        }
+    }
+
+    .to-left-lg {
+        &.to_white {
+            &:after {
+                border-color: transparent #FFFFFF transparent transparent;
+            }
+        }
+
+        &.to_black {
+            &:after {
+                border-color: transparent #2b2b2b transparent transparent;
+            }
+        }
+
+        &.to_green {
+            &:after {
+                border-color: transparent #97c00e transparent transparent;
+            }
+        }
+
+        &.to_blue {
+            &:after {
+                border-color: transparent #2d76b5 transparent transparent;
+            }
+        }
+    }
+
+    .to-top-lg {
+        &.to_white {
+            &:after {
+                border-color: transparent transparent #FFFFFF transparent;
+            }
+        }
+
+        &.to_black {
+            &:after {
+                border-color: transparent transparent #2b2b2b transparent;
+            }
+        }
+
+        &.to_green {
+            &:after {
+                border-color: transparent transparent #97c00e transparent;
+            }
+        }
+
+        &.to_blue {
+            &:after {
+                border-color: transparent transparent #2d76b5 transparent;
+            }
+        }
+    }
+
+    .to-bottom-lg {
+        &.to_white {
+            &:after {
+                border-color: #FFFFFF transparent transparent  transparent;
+            }
+        }
+
+        &.to_black {
+            &:after {
+                border-color: #2b2b2b transparent transparent  transparent;
+            }
+        }
+
+        &.to_green {
+            &:after {
+                border-color: #97c00e transparent transparent  transparent;
+            }
+        }
+
+        &.to_blue {
+            &:after {
+                border-color: #2d76b5 transparent transparent transparent;
+            }
+        }
+    }
+
+    .to-right-lg,
+    .to-left-lg,
+    .to-top-lg,
+    .to-bottom-lg {
+        position: relative;
+
+        &:after {
+            content: "";
+            position: absolute;
+            z-index: 100;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+    }
+
+    .to-right-lg {
+        &:after {
+            top: 50%;
+            transform: translateY(-50%);
+            right: -14px;
+            border-width: 15px 0 15px 15px;
+            border-color: transparent transparent transparent #FFFFFF;
+        }
+    }
+
+    .to-left-lg {
+        &:after {
+            top: 50%;
+            transform: translateY(-50%);
+            left: -14px;
+            border-width: 15px 15px 15px 0;
+            border-color: transparent #FFFFFF transparent transparent;
+        }
+    }
+
+    .to-top-lg {
+        &:after {
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 0px 15px 15px 15px;
+            border-color: transparent transparent #ffffff transparent;
+        }
+    }
+
+    .to-bottom-lg {
+        &:after {
+            bottom: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 15px 15px 0px  15px;
+            border-color: #ffffff transparent transparent  transparent;
+        }
+    }
+}
