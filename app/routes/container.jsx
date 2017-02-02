@@ -5,7 +5,7 @@ import Footer from '../../common/components/Footer.jsx'
 
 const Container = (props) => <div>
 <Nav />
-{props.children}	
+{props.children}
 <Footer />
 </div>
 
@@ -27,7 +27,7 @@ class Nav extends React.Component {
 
         $('.dropdown-menu').find('a').on('click', function(){
             if($('button.navbar-toggle').is(':visible')){
-                $('.navbar-toggle').click();   
+                $('.navbar-toggle').click();
             }
         })
     }
@@ -52,7 +52,7 @@ class Nav extends React.Component {
     					</Link>
     				</div>
     				<ul className="navbar-authorization">
-    					<li>JAN KOWALSKI</li>
+    					<li>Pawel</li>
     					<li><a className="navbar-authorization-logout simple-btn mode-orange-1" href="/">Wyloguj</a></li>
     				</ul>
     				<ul className="navbar-lang">

@@ -255,7 +255,7 @@ export default class Detail extends React.Component {
 									       scoreClass = "column-change mode-negative";
 									     }
 
-			
+
 									var stocks = category.stocks.map(function(stock, i){
 
 									     var scoreClass = "column-change mode-neutral";
@@ -268,7 +268,7 @@ export default class Detail extends React.Component {
 
 										return (
 										<tr>
-																							
+
 													<td>
 														<span className="component-table-partCont">
 															<input onChange={self.handleChange} type="text" defaultValue={stock.percentage}/>
@@ -292,7 +292,7 @@ export default class Detail extends React.Component {
 											return (
 											<table>
 												<thead>
-											
+
 												<tr className="row-head3">
 													<th className="column-part">
 														<span className="column-part-ico"></span>
@@ -306,15 +306,15 @@ export default class Detail extends React.Component {
 													</th>
 												</tr>
 											</thead>
-											<tbody>		
+											<tbody>
 												{stocks}																			</tbody>
 											</table>
 										)
-									
-									
+
+
 								}, this)
 							}
-											
+
 									</div>
 								</div>
 							</div>
@@ -327,7 +327,7 @@ export default class Detail extends React.Component {
 							</div>
 						</div>
 					</div>
-					
+
 				</div>
 		)
     }

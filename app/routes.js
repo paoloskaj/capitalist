@@ -10,6 +10,9 @@ import Purchase from './routes/purchase.jsx'
 import Topup from './routes/topup.jsx'
 import Register from './routes/register.jsx'
 
+
+
+
 module.exports = (
     <Route name="home" path="/" component={Container}>
 	    <IndexRoute component={Dashboard}/>
@@ -19,5 +22,6 @@ module.exports = (
 	    <Route name="detail" path='detail' component={Detail} />
 	    <Route name="topup" path='topup' component={Topup} />
 	    <Route name="register" path='register' component={Register} />
+
     </Route>
 )

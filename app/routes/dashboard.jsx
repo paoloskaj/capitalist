@@ -5,6 +5,8 @@ require('rc-slider/assets/index.css');
 
 var ReactDOM = require('react-dom');
 var Slider = require('rc-slider');
+var MotivDefaultValue= 50;
+
 import { Router, Route, Link, browserHistory } from 'react-router'
 import RecommendedMotives from '../components/common/RecommendedMotives.jsx'
 var LineChart = require("react-chartjs").Line;
@@ -63,9 +65,9 @@ class Wallet extends React.Component {
 
         var doughnutOptions = {
 
-            percentageInnerCutout: 60,
-            animation: false,
-            animationSteps: 50,
+            percentageInnerCutout: 10,
+            animation: true,
+            animationSteps: 10,
             animateRotate: true,
             responsive: true,
 
@@ -91,7 +93,7 @@ class Wallet extends React.Component {
 
         ]
 
-        
+
 
         return (
         <div>
@@ -100,7 +102,7 @@ class Wallet extends React.Component {
              <thead>
               <tr>
                 <th>Portfel</th>
-                <th>00.00</th>
+                <th>420.00</th>
                 <th></th>
                 <th></th>
               </tr>
@@ -114,7 +116,8 @@ class Wallet extends React.Component {
                 </td>
                  <td rowSpan="4">
                   <div><span style={{"background" : "#e87936"}}></span><label>Wartość inwestycji</label></div>
-                  <div><span style={{"background" : "#fcd95d"}}></span><label>Gotówka</label></div>
+                  <div><span style={{"background" : "#f0a22c"}}></span><label>Gotówka</label></div>
+                  <div><span style={{"background" : "#fcd95d"}}></span><label>Zyski</label></div>
                 </td>
               </tr>
               <tr>
@@ -151,15 +154,15 @@ class Graph extends React.Component {
      render() {
 
       var lineOptions = {
-          fill : false,
+          fill : true,
           responsive : true,
           bezierCurve: false,
-          animation: false,
+          animation: true,
           maintainAspectRatio: false
       }
 
       var lineData = {
-        labels : ["00.00","00.00","00.00","00.00","00.00","00.00","00.00"],
+        labels : ["2010","2011","2012","2013","2014","2015","2016"],
         datasets : [
           {
             fillColor : "rgba(0,0,0,0.0)", // hack for no fill
@@ -175,7 +178,7 @@ class Graph extends React.Component {
           <div className="graph-component">
             <div className="component-header display-table _w100">
               <div className="display-table-cell text-left">zysk / strata</div>
-              <div className="display-table-cell text-right s9">miesiąc rok</div>
+              <div className="display-table-cell text-right s9">Data</div>
             </div>
             <div className="component-body" style={{"height" : "165px"}}>
              <LineChart data={lineData} options={lineOptions} />
@@ -184,14 +187,14 @@ class Graph extends React.Component {
               <a href="" className="component-group-button _selected">dzień</a>
               <a href="" className="component-group-button">MIESIĄC</a>
               <a href="" className="component-group-button">3 MIESIĄCE</a>
-              <a href="" className="component-group-button">6 MIESIĘCY</a>
               <a href="" className="component-group-button">ROK</a>
+              <a href="" className="component-group-button">Cała historia</a>
             </div>
            </div>
            <div className="text-right">
         <a href="" className="simple-btn mode-orange-1 m-t-15">SZCZEGÓŁY</a>
         </div>
-    
+
        </div>
           )
        }
@@ -243,6 +246,10 @@ class Graph extends React.Component {
      }else if(motive.change < 0){
        changeClass = "mode-negative column-change";
      }
+     motive.value=20;
+
+     //motive.change=20;
+
 
      return (<tr>
      <td>
@@ -257,7 +264,7 @@ class Graph extends React.Component {
        <span className="column-change-title vcenter">{motive.change}</span>
      </td>
      <td className="column-share">
-            <Slider tipTransitionName="rc-slider-tooltip-zoom-down" onChange={this.handleShareChange} />
+            <Slider defaultValue={MotivDefaultValue} tipTransitionName="rc-slider-tooltip-zoom-down"  onChange={this.handleShareChange} />
      </td>
      {/*<td>{motive.share}</td>*/}
      <td>
@@ -279,13 +286,13 @@ var wallet = {
 }
 
 var motives = [
-    { 'id': 0, 'name': 'Kamienie Szlachetne', 'img': '/images/sample/stones.jpg', 'value': '00.00', 'change': 0, 'share': 33.33 },
-    { 'id': 1, 'name': 'Gry Online', 'img': '/images/sample/games.jpg', 'value': '00.00', 'change': -20, 'share': 22.30 },
+    { 'id': 0, 'name': 'Urządzenia przenośne', 'img': '/images/sample/stones.jpg', 'value': '5', 'change': 0, 'share': 33.33 },
+    { 'id': 1, 'name': 'Gry Online', 'img': '/images/sample/games.jpg', 'value': '00.00', 'change': '-10%', 'share': 22.30 },
     { 'id': 2, 'name': 'Video Online', 'img': '/images/sample/videos.jpg', 'value': '00.00', 'change': 27, 'share': 12.30 },
 ]
 
 var recommendedMotives = [
-    { 'id': 0, 'name': 'Kamienie Szlachetne', 'img': '/images/sample/stones.jpg', 'change': '00.00', 'description': 'Lorem Ipsum' },
+    { 'id': 0, 'name': 'Kamienie Szlachetne', 'img': '/images/sample/technology.jpg', 'change': '00.00', 'description': 'Lorem Ipsum' },
     { 'id': 1, 'name': 'Gry Online', 'img': '/images/sample/games.jpg', 'change': '00.00', 'description': 'Lorem Ipsum' },
 ]
 

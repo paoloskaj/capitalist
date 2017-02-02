@@ -1,10 +1,25 @@
 import React from 'react';
 import { Router, Route, Link, browserHistory } from 'react-router'
 
+
 import RecommendedMotives from '../components/common/RecommendedMotives.jsx'
+//Motifs=require('../models/Motifs');
+
+//var assert=require('assert');
+//var db = mongoskin.db('mongodb://@localhost:27017/nodetest2', {safe:true});
+//var cursor= db.collection('motiflist').find();
+//console.log(cursor);
 
 require('rc-slider/assets/index.css');
 var Slider = require('rc-slider');
+var SliderDefaultValue=10;
+var min=0;
+var max=100;
+
+
+
+
+
 
 
 export default class Search extends React.Component {
@@ -14,8 +29,10 @@ export default class Search extends React.Component {
         this.state = data;
     }
 
+
     render() {
         return (
+
         <div>
           <div className="container m-t-20 m-b-20" style={{"padding" : "15px"}}>
             <div className="row">
@@ -34,9 +51,9 @@ export default class Search extends React.Component {
                       </div>
                       <div className="block-content">
                       <div className="block-content-slider">
-                         <Slider tipTransitionName="rc-slider-tooltip-zoom-down" onChange={this.handleShareChange} />
+                         <Slider defaultValue={SliderDefaultValue} min={min} max={max} tipTransitionName="rc-slider-tooltip-zoom-down" onChange={this.handleShareChange} />
                       </div>
-                      
+
                       </div>
                     </div>
                     <div className="search-menu-block">
@@ -188,7 +205,7 @@ export default class Search extends React.Component {
                       </div>
                     </div>
                   </div>
-           
+
               {
                 this.state.motives.map(function(motive, i){
 
@@ -201,10 +218,14 @@ export default class Search extends React.Component {
                      <div className="col-padding col-md-4 col-sm-4">
                     <div className="search-news-block">
                       <div className="block-image">
-                        <img width="252" height="157" src={motive.img} alt=""/>
+                          <Link to="detail">
+                          <img width="252" height="157" src={motive.img} alt=""/>
+                          </Link>
                         <div className="block-image-overlay">
                           <div className="display-table _w100">
-                            <div className="block-image-overlay-title display-table-cell text-left">{motive.name}</div>
+                              <Link to="detail" className="block-image-overlay-title display-table-cell text-left">{motive.name}</Link>
+
+
                             <div className="block-image-overlay-price _positive display-table-cell text-right">{motive.percentage}</div>
                           </div>
                         </div>
@@ -236,9 +257,9 @@ export default class Search extends React.Component {
                   )
                 })
               }
-        
-                
-                
+
+
+
                 </div>
 
                 <div className="component-footer">
@@ -265,7 +286,7 @@ export default class Search extends React.Component {
         </div>
         <div className="container m-b-20" style={{"padding" : "15px"}}>
           <div className="row">
-            <div className="col-md-12">              
+            <div className="col-md-12">
                   <RecommendedMotives recommendedMotives={data.recommendedMotives} />
             </div>
           </div>
@@ -276,60 +297,74 @@ export default class Search extends React.Component {
 }
 
 
+
+
+/*
+ mongoose.connect(config.database);
+ mongoose.connection.on('error', function() {
+ console.info('Error: Could not connect to MongoDB. Did you forget to run `mongod`?');
+ });
+ */
+
+
+
+
 var recommendedMotives = [
     { 'id': 0, 'name': 'Kamienie Szlachetne', 'img': '/wwww/www/', 'change': '00.00', 'description': 'Lorem Ipsum' },
     { 'id': 1, 'name': 'Gry Online', 'img': '/wwww/www/', 'change': '00.00', 'description': 'Lorem Ipsum' },
 ]
 
+
+
 var motives = [
 
-    { 'id': 0, 
+    { 'id': 0,
       'name': 'Technologie',
        'img': '/images/sample/technology.png',
-        'value': '230', 
+        'value': '230',
         'currency' : 'PLN',
          'percentage': '+8,94%',
          'risk': 3 ,
          'return': 1 },
-    { 'id': 1, 
+    { 'id': 1,
       'name': 'Recykling',
        'img': '/images/sample/recycling.png',
-        'value': '34', 
+        'value': '34',
                 'currency' : 'PLN',
          'percentage': '+2,94%',
          'risk': 4 ,
          'return': 4 },
-    { 'id': 2, 
+    { 'id': 2,
       'name': 'Narzędzia medyczne',
        'img': '/images/sample/medical.png',
-        'value': '320', 
+        'value': '320',
                 'currency' : 'PLN',
          'percentage': '+7,54%',
          'risk': 2 ,
          'return': 1 },
 
-    { 'id': 3, 
+    { 'id': 3,
       'name': 'Badania medyczne',
        'img': '/images/sample/research.png',
-        'value': '543', 
+        'value': '543',
                 'currency' : 'PLN',
          'percentage': '+0,34%',
          'risk': 2 ,
          'return': 4 },
 
-    { 'id': 4, 
+    { 'id': 4,
       'name': 'Kasyna',
        'img': '/images/sample/casino.png',
-        'value': '30', 
+        'value': '30',
                 'currency' : 'PLN',
          'percentage': '+1,44%',
          'risk': 2 ,
          'return': 4 },
 
-    { 'id': 5, 
+    { 'id': 5,
       'name': 'Zdrowa żywność',
        'img': '/images/sample/food.png',
-        'value': '94', 
+        'value': '94',
                 'currency' : 'PLN',
          'percentage': '+22,01%',
          'risk': 2 ,

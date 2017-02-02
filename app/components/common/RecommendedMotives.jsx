@@ -41,7 +41,7 @@ const carouselInstance = (
             <img className="img-max-width" alt="900x500" src="/images/carousel.jpg"/>
           </div>
           <div className="col-padding col-lg-10 col-md-9">
-            <p className="s18 text-uppercase m-b-10">Technologie</p>
+            <p className="s18 text-uppercase m-b-10">Cos tam</p>
             <p className="s14">Zainwestuj w Ĺ›wiat techniki ktĂłra z dnia na dzieĹ„ zmienia siÄ™ i roĹ›nie w takim tempnie ĹĽe dziĹ› nikt nie potrafi za niÄ… nadÄ…ĹĽyÄ‡.</p>
             <div className="text-right">
               <button className="simple-btn mode-orange-1 m-l-5 m-r-5">WIÄ�CEJ</button>
@@ -55,7 +55,7 @@ const carouselInstance = (
 );
 
 export default class RecommendedMotives extends React.Component {
-    
+
     constructor() {
         super();
         this.state = {
